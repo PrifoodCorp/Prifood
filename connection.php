@@ -11,6 +11,8 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 if($conn) {
     echo 'Connected';
 } else {
-    echo 'Error';
+    // echo 'Error';
+    echo json_encode(sqlsrv_errors($conn));
 }
+exit();
 ?>
